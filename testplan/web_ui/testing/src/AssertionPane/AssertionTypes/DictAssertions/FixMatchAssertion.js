@@ -2,15 +2,18 @@ import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import DictBaseAssertion from './DictBaseAssertion';
 import DictButtonGroup from './DictButtonGroup';
-import FixCellRenderer from './FixCellRenderer';
+import FixCellRenderer, {FixTagTooltip} from './FixCellRenderer';
 import {
   prepareDictColumnDefs,
   prepareDictRowData,
   sortFlattenedJSON,
   dictCellStyle
 } from './dictAssertionUtils';
-import {SORT_TYPES, FILTER_OPTIONS} from './../../../Common/defaults';
-
+import {
+  SORT_TYPES,
+  FILTER_OPTIONS,
+  defaultFixSpec,
+} from './../../../Common/defaults';
 
 /**
  * Component that renders FixMatch assertion.
@@ -72,7 +75,12 @@ export default function FixMatchAssertion(props) {
     <DictBaseAssertion
       buttons={buttonGroup}
       columns={columns}
-      rows={prepareDictRowData(rowData, props.assertion.line_no)}
+      rows={prepareDictRowData(
+        rowData,
+        props.assertion.line_no,
+        defaultFixSpec.tagsByNum,
+        FixTagTooltip
+      )}
     />
   );
 }

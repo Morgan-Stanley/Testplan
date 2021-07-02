@@ -32,8 +32,8 @@ import {
 } from '../Common/utils';
 
 import { POLL_MS } from '../Common/defaults.js';
-import { AssertionContext, defaultAssertionStatus } from "../Common/context";
 import { generateURLWithParameters } from "../Common/utils";
+import { AssertionContext, defaultAssertionStatus } from "../Common/context";
 
 const api_prefix = "/api/v1/interactive";
 
@@ -662,9 +662,9 @@ class InteractiveReport extends React.Component {
           handleColumnResizing={this.handleColumnResizing}
           url={this.props.match.path}
         />
-        <AssertionContext.Provider value={this.state.assertionStatus}>
-          {centerPane}
-        </AssertionContext.Provider>
+         <AssertionContext.Provider value={this.state.assertionStatus}>
+           {centerPane}
+         </AssertionContext.Provider>
       </div>
     );
   }

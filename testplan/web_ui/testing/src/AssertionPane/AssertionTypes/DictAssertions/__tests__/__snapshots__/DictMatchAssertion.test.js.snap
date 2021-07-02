@@ -110,6 +110,7 @@ exports[`DictMatchAssertion shallow renders the correct HTML structure 1`] = `
           "value": "5",
         },
         "key": Object {
+          "tooltip": null,
           "type": "key",
           "value": "bar",
         },
@@ -131,6 +132,7 @@ exports[`DictMatchAssertion shallow renders the correct HTML structure 1`] = `
           "value": "10",
         },
         "key": Object {
+          "tooltip": null,
           "type": "key",
           "value": "extra-key",
         },
@@ -152,6 +154,7 @@ exports[`DictMatchAssertion shallow renders the correct HTML structure 1`] = `
           "value": "1",
         },
         "key": Object {
+          "tooltip": null,
           "type": "key",
           "value": "foo",
         },

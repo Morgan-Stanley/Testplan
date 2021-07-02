@@ -6,9 +6,9 @@ import os
 import argparse
 from threading import Thread
 
-from flask import Flask, send_from_directory, redirect
+import werkzeug.exceptions
+from flask import Flask, send_from_directory, redirect, jsonify
 from flask_restplus import Resource, Api
-from werkzeug import exceptions
 from cheroot.wsgi import Server as WSGIServer, PathInfoDispatcher
 
 from testplan import defaults
@@ -52,7 +52,7 @@ class Testplan(Resource):
                 directory=directory, filename=INDEX_HTML
             )
         else:
-            raise exceptions.NotFound()
+            raise werkzeug.exceptions.NotFound()
 
 
 @_api.route("/api/v1/reports/<string:report_uid>")
@@ -72,7 +72,7 @@ class TestplanReport(Resource):
                 filename=os.path.basename(report_path),
             )
         else:
-            raise exceptions.NotFound()
+            raise werkzeug.exceptions.NotFound()
 
 
 @_api.route(
@@ -84,7 +84,7 @@ class TestplanAssertions(Resource):
         Get an Assertion report (JSON) for a specific Testplan report given
         their uids.
         """
-        raise exceptions.NotImplemented()  # pylint: disable=notimplemented-raised
+        raise werkzeug.exceptions.NotImplemented()  # pylint: disable=notimplemented-raised
 
 
 @_api.route(
@@ -105,7 +105,14 @@ class TestplanAttachment(Resource):
                 filename=os.path.basename(attachment_path),
             )
         else:
-            raise exceptions.NotFound()
+            raise werkzeug.exceptions.NotFound()
+
+
+@_api.route("/api/v1/metadata/fix_spec/tags_by_num")
+class TestplanMetadata(Resource):
+    def get(self):
+        """Get meta data which is used to parse Testplan report."""
+        return jsonify({"tags_by_num": {}})  # not implemented
 
 
 class WebServer(Thread):

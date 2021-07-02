@@ -104,6 +104,7 @@ exports[`DictLogAssertion shallow renders the correct HTML structure 1`] = `
           "status": undefined,
         },
         "key": Object {
+          "tooltip": null,
           "type": "key",
           "value": "baz",
         },
@@ -121,6 +122,7 @@ exports[`DictLogAssertion shallow renders the correct HTML structure 1`] = `
           "status": undefined,
         },
         "key": Object {
+          "tooltip": null,
           "type": "key",
           "value": "foo",
         },
@@ -138,6 +140,7 @@ exports[`DictLogAssertion shallow renders the correct HTML structure 1`] = `
           "status": undefined,
         },
         "key": Object {
+          "tooltip": null,
           "type": "key",
           "value": "",
         },
@@ -155,6 +158,7 @@ exports[`DictLogAssertion shallow renders the correct HTML structure 1`] = `
           "status": undefined,
         },
         "key": Object {
+          "tooltip": null,
           "type": "key",
           "value": "",
         },
@@ -172,6 +176,7 @@ exports[`DictLogAssertion shallow renders the correct HTML structure 1`] = `
           "status": undefined,
         },
         "key": Object {
+          "tooltip": null,
           "type": "key",
           "value": "",
         },
@@ -189,6 +194,7 @@ exports[`DictLogAssertion shallow renders the correct HTML structure 1`] = `
           "status": undefined,
         },
         "key": Object {
+          "tooltip": null,
           "type": "key",
           "value": "bar",
         },
@@ -206,6 +212,7 @@ exports[`DictLogAssertion shallow renders the correct HTML structure 1`] = `
           "status": undefined,
         },
         "key": Object {
+          "tooltip": null,
           "type": "key",
           "value": "color",
         },

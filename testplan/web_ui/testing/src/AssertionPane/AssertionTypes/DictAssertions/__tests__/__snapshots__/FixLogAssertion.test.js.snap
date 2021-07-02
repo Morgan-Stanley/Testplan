@@ -133,6 +133,7 @@ exports[`FixLogAssertion shallow renders the correct HTML structure 1`] = `
           "status": undefined,
         },
         "key": Object {
+          "tooltip": <FixTagTooltip />,
           "type": "key",
           "value": 555,
         },
@@ -163,6 +164,7 @@ exports[`FixLogAssertion shallow renders the correct HTML structure 1`] = `
           "status": undefined,
         },
         "key": Object {
+          "tooltip": <FixTagTooltip />,
           "type": "key",
           "value": 624,
         },
@@ -175,11 +177,12 @@ exports[`FixLogAssertion shallow renders the correct HTML structure 1`] = `
         "descriptor": Object {
           "indent": 1,
           "isEmptyLine": false,
-          "isListKey": true,
+          "isListKey": false,
           "lineNo": 688,
           "status": undefined,
         },
         "key": Object {
+          "tooltip": <FixTagTooltip />,
           "type": "key",
           "value": 556,
         },
@@ -210,6 +213,7 @@ exports[`FixLogAssertion shallow renders the correct HTML structure 1`] = `
           "status": undefined,
         },
         "key": Object {
+          "tooltip": <FixTagTooltip />,
           "type": "key",
           "value": 624,
         },
@@ -227,6 +231,7 @@ exports[`FixLogAssertion shallow renders the correct HTML structure 1`] = `
           "status": undefined,
         },
         "key": Object {
+          "tooltip": <FixTagTooltip />,
           "type": "key",
           "value": 556,
         },
@@ -244,6 +249,7 @@ exports[`FixLogAssertion shallow renders the correct HTML structure 1`] = `
           "status": undefined,
         },
         "key": Object {
+          "tooltip": <FixTagTooltip />,
           "type": "key",
           "value": 36,
         },
@@ -261,6 +267,7 @@ exports[`FixLogAssertion shallow renders the correct HTML structure 1`] = `
           "status": undefined,
         },
         "key": Object {
+          "tooltip": <FixTagTooltip />,
           "type": "key",
           "value": 38,
         },
@@ -278,6 +285,7 @@ exports[`FixLogAssertion shallow renders the correct HTML structure 1`] = `
           "status": undefined,
         },
         "key": Object {
+          "tooltip": <FixTagTooltip />,
           "type": "key",
           "value": 22,
         },
@@ -295,6 +303,7 @@ exports[`FixLogAssertion shallow renders the correct HTML structure 1`] = `
           "status": undefined,
         },
         "key": Object {
+          "tooltip": <FixTagTooltip />,
           "type": "key",
           "value": 55,
         },

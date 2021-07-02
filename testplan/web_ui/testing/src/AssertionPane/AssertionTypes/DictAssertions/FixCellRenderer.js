@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import _ from 'lodash';
 import {library} from '@fortawesome/fontawesome-svg-core';
 import {faInfoCircle} from '@fortawesome/free-solid-svg-icons';
 
 import DictCellRenderer from './DictCellRenderer';
-// import FixTagToolTip from './FixTagToolTip'
 
 library.add(faInfoCircle);
 
@@ -51,4 +51,54 @@ FixCellRenderer.propTypes = {
   rowIndex: PropTypes.number,
   /** The Column definition of the current cell */
   colDef: PropTypes.object,
+};
+
+
+/**
+ * Render a tooltip of a fix tag.
+ */
+export const FixTagTooltip = (props) => {
+  if (_.isEmpty(props.info)) {
+    return null;
+  }
+
+  let enumInfo = null;
+  let ellipsis = null;
+
+  if (!_.isEmpty(props.info.enum_vals)) {
+    enumInfo = Object.keys(props.info.enum_vals).slice(0, 20).map((key) => {
+      const enum_val = props.info.enum_vals[key];
+      return (
+        <>
+          <em>
+            <strong>{`${key}: `}</strong>
+            {enum_val.long_descr || enum_val.short_descr}
+          </em>
+          <br />
+        </>
+      );
+    });
+    if (Object.keys(props.info.enum_vals).length > 20) {
+      ellipsis = '...';
+    }
+  }
+
+  return (
+    <>
+      <strong>
+        {`${props.info.num} `}
+        <font color="#808080">{props.info.names.join(' ')}</font>
+      </strong>
+      <br /><br />
+      {props.info.descr}
+      {enumInfo ? (<><br /><br />{enumInfo}</>) : null}
+      {ellipsis ? (<><strong>{ellipsis}</strong><br /></>) : null}
+    </>
+  );
+};
+
+
+FixTagTooltip.propTypes = {
+  /** The tag detailed info for the tooltip */
+  info: PropTypes.object
 };
