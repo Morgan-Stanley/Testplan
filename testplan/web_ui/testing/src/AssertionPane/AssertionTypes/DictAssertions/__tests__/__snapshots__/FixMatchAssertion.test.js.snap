@@ -338,6 +338,7 @@ exports[`FixMatchAssertion shallow renders the correct HTML structure 1`] = `
           "status": "Failed",
         },
         "key": Object {
+          "tooltip": <FixTagTooltip />,
           "type": "key",
           "value": 555,
         },
@@ -372,6 +373,7 @@ exports[`FixMatchAssertion shallow renders the correct HTML structure 1`] = `
           "value": "B",
         },
         "key": Object {
+          "tooltip": <FixTagTooltip />,
           "type": "key",
           "value": 601,
         },
@@ -393,6 +395,7 @@ exports[`FixMatchAssertion shallow renders the correct HTML structure 1`] = `
           "value": "A",
         },
         "key": Object {
+          "tooltip": <FixTagTooltip />,
           "type": "key",
           "value": 600,
         },
@@ -410,6 +413,7 @@ exports[`FixMatchAssertion shallow renders the correct HTML structure 1`] = `
           "status": "Passed",
         },
         "key": Object {
+          "tooltip": <FixTagTooltip />,
           "type": "key",
           "value": 683,
         },
@@ -444,6 +448,7 @@ exports[`FixMatchAssertion shallow renders the correct HTML structure 1`] = `
           "value": "a",
         },
         "key": Object {
+          "tooltip": <FixTagTooltip />,
           "type": "key",
           "value": 688,
         },
@@ -456,7 +461,7 @@ exports[`FixMatchAssertion shallow renders the correct HTML structure 1`] = `
         "descriptor": Object {
           "indent": 2,
           "isEmptyLine": false,
-          "isListKey": true,
+          "isListKey": false,
           "lineNo": 667,
           "status": "Passed",
         },
@@ -465,6 +470,7 @@ exports[`FixMatchAssertion shallow renders the correct HTML structure 1`] = `
           "value": "[a-z]",
         },
         "key": Object {
+          "tooltip": <FixTagTooltip />,
           "type": "key",
           "value": 689,
         },
@@ -499,6 +505,7 @@ exports[`FixMatchAssertion shallow renders the correct HTML structure 1`] = `
           "value": "b",
         },
         "key": Object {
+          "tooltip": <FixTagTooltip />,
           "type": "key",
           "value": 688,
         },
@@ -511,7 +518,7 @@ exports[`FixMatchAssertion shallow renders the correct HTML structure 1`] = `
         "descriptor": Object {
           "indent": 2,
           "isEmptyLine": false,
-          "isListKey": true,
+          "isListKey": false,
           "lineNo": 667,
           "status": "Passed",
         },
@@ -520,6 +527,7 @@ exports[`FixMatchAssertion shallow renders the correct HTML structure 1`] = `
           "value": "b",
         },
         "key": Object {
+          "tooltip": <FixTagTooltip />,
           "type": "key",
           "value": 689,
         },
@@ -554,6 +562,7 @@ exports[`FixMatchAssertion shallow renders the correct HTML structure 1`] = `
           "value": "C",
         },
         "key": Object {
+          "tooltip": <FixTagTooltip />,
           "type": "key",
           "value": 600,
         },
@@ -575,6 +584,7 @@ exports[`FixMatchAssertion shallow renders the correct HTML structure 1`] = `
           "value": "B",
         },
         "key": Object {
+          "tooltip": <FixTagTooltip />,
           "type": "key",
           "value": 601,
         },
@@ -592,6 +602,7 @@ exports[`FixMatchAssertion shallow renders the correct HTML structure 1`] = `
           "status": "Passed",
         },
         "key": Object {
+          "tooltip": <FixTagTooltip />,
           "type": "key",
           "value": 683,
         },
@@ -626,6 +637,7 @@ exports[`FixMatchAssertion shallow renders the correct HTML structure 1`] = `
           "value": "c",
         },
         "key": Object {
+          "tooltip": <FixTagTooltip />,
           "type": "key",
           "value": 688,
         },
@@ -638,7 +650,7 @@ exports[`FixMatchAssertion shallow renders the correct HTML structure 1`] = `
         "descriptor": Object {
           "indent": 2,
           "isEmptyLine": false,
-          "isListKey": true,
+          "isListKey": false,
           "lineNo": 667,
           "status": "Passed",
         },
@@ -647,6 +659,7 @@ exports[`FixMatchAssertion shallow renders the correct HTML structure 1`] = `
           "value": "VAL in ('c', 'd')",
         },
         "key": Object {
+          "tooltip": <FixTagTooltip />,
           "type": "key",
           "value": 689,
         },
@@ -681,6 +694,7 @@ exports[`FixMatchAssertion shallow renders the correct HTML structure 1`] = `
           "value": "d",
         },
         "key": Object {
+          "tooltip": <FixTagTooltip />,
           "type": "key",
           "value": 688,
         },
@@ -702,6 +716,7 @@ exports[`FixMatchAssertion shallow renders the correct HTML structure 1`] = `
           "value": "d",
         },
         "key": Object {
+          "tooltip": <FixTagTooltip />,
           "type": "key",
           "value": 689,
         },
@@ -723,6 +738,7 @@ exports[`FixMatchAssertion shallow renders the correct HTML structure 1`] = `
           "value": "6",
         },
         "key": Object {
+          "tooltip": <FixTagTooltip />,
           "type": "key",
           "value": 36,
         },
@@ -744,6 +760,7 @@ exports[`FixMatchAssertion shallow renders the correct HTML structure 1`] = `
           "value": "VAL >= 4",
         },
         "key": Object {
+          "tooltip": <FixTagTooltip />,
           "type": "key",
           "value": 38,
         },
@@ -765,6 +782,7 @@ exports[`FixMatchAssertion shallow renders the correct HTML structure 1`] = `
           "value": "5",
         },
         "key": Object {
+          "tooltip": <FixTagTooltip />,
           "type": "key",
           "value": 22,
         },
@@ -786,6 +804,7 @@ exports[`FixMatchAssertion shallow renders the correct HTML structure 1`] = `
           "value": "2",
         },
         "key": Object {
+          "tooltip": <FixTagTooltip />,
           "type": "key",
           "value": 55,
         },

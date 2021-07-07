@@ -19,10 +19,11 @@ import {
 } from "./reportUtils";
 import { generateSelectionPath } from "./path";
 
-import { COLUMN_WIDTH } from "../Common/defaults";
+import { COLUMN_WIDTH, defaultFixSpec } from "../Common/defaults";
 import { fakeReportAssertions } from "../Common/fakeReport";
-import { AssertionContext, defaultAssertionStatus } from "../Common/context";
 import { generateURLWithParameters } from "../Common/utils";
+import { AssertionContext, defaultAssertionStatus } from "../Common/context";
+
 /**
  * BatchReport component:
  *   * fetch Testplan report.
@@ -123,10 +124,14 @@ class BatchReport extends React.Component {
               `/api/v1/reports/${uid}/attachments/${rawReport.structure_file}`,
               { transformResponse: parseToJson }
             );
+            const metadataReq = axios.get(
+              `/api/v1/metadata/fix_spec/tags_by_num`,
+              { transformResponse: parseToJson }
+            );
             axios
-              .all([assertionsReq, structureReq])
+              .all([assertionsReq, structureReq, metadataReq])
               .then(
-                axios.spread((assertionsRes, structureRes) => {
+                axios.spread((assertionsRes, structureRes, metadataRes) => {
                   if (!assertionsRes.data) {
                     alert(
                       "Failed to parse assertion datails!\n" +
@@ -139,6 +144,7 @@ class BatchReport extends React.Component {
                     assertionsRes.data,
                     structureRes.data
                   );
+                  defaultFixSpec.tagsByNum = metadataRes.data.tags_by_num || {};
                   this.setReport(this.updateReportUID(mergedReport, uid));
                 })
               )

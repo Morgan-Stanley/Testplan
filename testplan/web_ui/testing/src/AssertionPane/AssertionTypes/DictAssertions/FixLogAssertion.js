@@ -2,13 +2,13 @@ import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import DictBaseAssertion from './DictBaseAssertion';
 import DictButtonGroup from './DictButtonGroup';
-import FixCellRenderer from './FixCellRenderer';
+import FixCellRenderer, {FixTagTooltip} from './FixCellRenderer';
 import {
   prepareDictColumnDefs,
   prepareDictRowData,
   dictCellStyle
 } from './dictAssertionUtils';
-import {SORT_TYPES} from './../../../Common/defaults';
+import {SORT_TYPES, defaultFixSpec} from './../../../Common/defaults';
 
 /**
  * Component that renders FixLog assertion.
@@ -57,12 +57,16 @@ export default function FixLogAssertion(props) {
     />
   );
 
-  
   return (
     <DictBaseAssertion
       buttonGroup={buttonGroup}
       columns={columns}
-      rows={prepareDictRowData(rowData, props.assertion.line_no)}
+      rows={prepareDictRowData(
+        rowData,
+        props.assertion.line_no,
+        defaultFixSpec.tagsByNum,
+        FixTagTooltip
+      )}
     />
   );
 }
